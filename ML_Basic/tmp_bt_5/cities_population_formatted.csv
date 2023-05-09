@@ -1,0 +1,79 @@
+Rank,City,Population,Area KM2,Area   M2,Density KM2,Density  M2,Country,Year
+1,Manila,1846513,43,17,43062,111532,Filipinler ,2020  [1] 2018 [2]
+2,Mandaluyong,425758,11,4,38495,99703,Filipinler ,2020  [1] [3]
+3,pateros,65227,2,1,37061,95988,Filipinler ,2020  [1] 2013 [3]
+4,Caloocan,1661584,53,21,31233,80893,Filipinler ,2020  [1] [3]
+5,ben fren,212646,7,3,30001,77702,İsrail ,2022 [4] [5]
+6,Katmandu,1442000,49,19,29161,75526,Nepal ,2020 [6]
+7,Dakka,8906136,306,118,29069,75289,Bangladeş ,-
+8,Makati,629616,22,8,28975,75044,Filipinler ,2020  [1] [3]
+9,Manhattan,1628701,59,23,27544,71340,Amerika Birleşik Devletleri,2020
+10,Port-au-Prince,987310,36,14,27395,70953,Hatay ,2015 [7]
+11,Levallois-Perret,64379,2,1,26713,69187,Fransa ,2020 [8]
+12,Vincennes,49891,2,1,26121,67653,Fransa ,2020 [9]
+13,Le Pré-Saint-Gervais,17950,1,0,25643,66415,Fransa ,2020 [10]
+14,pasig,803159,31,12,25530,66122,Filipinler ,2020  [1] [3]
+15,Karaçi,14910352,591,228,25229,65343,Pakistan ,2017 [11] [12]
+16,Saint-Mande,22619,1,0,24586,63677,Fransa ,2020 [13]
+17,Kalküta,4496694,185,71,24306,62954,Hindistan ,2019 [14] 2013 [15]
+18,Montrouge,50260,2,1,24280,62886,Fransa ,2020 [16]
+19,Saint-Josse-ten-Noode,27548,1,0,24165,62587,Belçika ,-
+20,Malabon,380522,16,6,23842,61751,Filipinler ,2020  [1] [3]
+21,Pasay,440656,19,7,23640,61229,Filipinler ,2020  [1] [3]
+22,"Napoli, Selanik",27084,1,0,23149,59955,Yunanistan ,-
+23,Erkek,133412,6,2,23002,59575,Maldivler ,-
+24,Şam,1711000,77,30,22221,57552,Suriye ,-
+25,Navotalar,247543,12,4,21507,55703,Filipinler ,2020  [1] [3]
+26,Asmara,963000,45,17,21400,55426,Eritre ,2012 [24]
+27,Mıslata,43756,2,1,21241,55014,İspanya ,-
+28,Makao,643100,30,12,21224,54971,Makao ,2015 [26] [27]
+29,Kallithea,100050,5,2,21063,54554,Yunanistan ,-
+30,Yeni Smyrni,73090,4,1,20764,53779,Yunanistan ,-
+31,Paris,2187526,105,41,20755,53754,Fransa ,2020 [29]
+32,naber,1072161,52,20,20722,53670,Hindistan ,-
+33,Bombay,12442373,603,233,20634,53442,Hindistan ,2013 [30] 2019 [32]
+34,"San Juan, Metro Manila",126347,6,2,21524,55748,Filipinler ,2020  [1] [3]
+35,Kolombo,752993,37,14,20351,52710,Sri Lanka ,-
+36,L'Hospitalet de Llobregat,252171,12,5,20336,52671,İspanya ,2016 [33]
+37,Marikina,456059,23,9,20144,52173,Filipinler ,2020  [1] [3]
+38,Birlik Şehri,66455,3,1,20047,51921,Amerika Birleşik Devletleri,-
+39,Saint-Gilles,50002,3,1,19842,51391,Belçika ,-
+40,Klişe,61070,3,1,19828,51354,Fransa ,2020 [36]
+41,Kotsiubynske,17249,1,0,19826,51351,Ukrayna ,-
+42,Courbevoie,81719,4,2,19597,50756,Fransa ,2020 [37]
+43,Boulogne-Billancourt,120071,6,2,19460,50403,Fransa ,2020 [38]
+44,Batı New York,49708,3,1,19060,49365,Amerika Birleşik Devletleri,-
+45,las pinas,606293,32,12,18935,49041,Filipinler ,2020  [1] [3]
+46,Koekelberg,21990,1,0,18795,48679,Belçika ,-
+47,Bandung,3075478,167,64,18416,47698,Endonezya ,-
+48,General Mariano Alvarez,172433,9,4,18344,47511,Filipinler ,2020  [1] 2013 [39]
+49,Monako,36950,2,1,18292,47377,Monako ,-
+50,Les Lilas,23045,1,0,18290,47370,Fransa ,2020 [42]
+51,Hoböken,60417,3,1,18225,47204,Amerika Birleşik Devletleri,2020 [34]
+52,Giv'atayim,58500,3,1,18056,46764,İsrail ,2019 [43]
+53,Quezon şehir,2960048,166,64,17882,46315,Filipinler ,2020  [1] [3]
+54,Vanveler,27729,2,1,17775,46037,Fransa ,2020 [44]
+55,Asnières-sur-Seine,85191,5,2,17674,45777,Fransa ,2020 [45]
+56,Ciudad Nezahualcóyotl,1110565,63,24,17503,45334,Meksika ,2010 [46]
+57,Suginami,582065,34,13,17089,44262,Japonya ,-
+58,Santa Coloma de Gramenet,118821,7,3,16974,43964,İspanya ,2019 [47]
+59,Modi'in Illit,80894,5,2,16748,43378,İsrail ,2022
+60,Çittagong,2582401,155,60,16661,43151,Bangladeş ,2018 [48]
+61,Sint-Jans-Molenbeek,97462,6,2,16547,42857,Belçika ,-
+62,Seul,9962393,605,234,16461,42634,Güney Kore ,2019 [49] 2013 [50]
+63,Kore mahallesi,124281,,,16452,42610,Amerika Birleşik Devletleri,2020
+64,Charenton-le-Pont,30374,2,1,16418,42524,Fransa ,2020 [51]
+65,La Garenne-Colombes,29169,2,1,16387,42443,Fransa ,2020 [52]
+66,Schaerbeek,133309,8,3,16377,42417,Belçika ,-
+67,Neuilly-sur-Seine,60361,4,1,16183,41913,Fransa ,2020 [53]
+68,Issy-les-Moulineaux,68451,4,2,16106,41715,Fransa ,2020 [54]
+69,Barselona,1636732,101,39,16149,41827,İspanya ,2021 [55]
+70,Cakarta,10560000,662,255,15964,41346,Endonezya ,2019 [56] 2020 [57]
+71,nazikçe,18605,1,0,15767,40836,Fransa ,2020 [58]
+72,Kahire,9539673,606,234,15742,40772,Mısır ,2019 [59] 2017 [60]
+73,Cimahi,568400,40,16,14080,36467,Endonezya ,2020
+74,Senglea,2820,0,0,14100,36519,Malta ,2013
+75,"Rosario, Cavite",110807,8,3,14561,37712,Filipinler ,2020  [1] 2013 [39]
+76,Mandaue,364116,25,10,14461,37453,Filipinler ,2020  [1] 2013 [39]
+77,bacoor,664625,46,18,14395,37284,Filipinler ,2020  [1] 2013 [39]
+78,"San Pedro, Laguna",326001,24,9,13555,35108,Filipinler ,2020  [1] 2013 [39]
