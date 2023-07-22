@@ -32,7 +32,6 @@ education_levels = ['some high school' , 'high school' , 'some college', "associ
 gender = data['gender'].unique()
 lunch = data['lunch'].unique()
 test = data['test preparation course'].unique()
-
 ord_transformer = Pipeline(steps=[
     ("imputer", SimpleImputer(strategy="most_frequent")),
     ("encoder", OrdinalEncoder(categories=[education_levels,gender,lunch,test])) #thêm vào sau education_levels, ....
