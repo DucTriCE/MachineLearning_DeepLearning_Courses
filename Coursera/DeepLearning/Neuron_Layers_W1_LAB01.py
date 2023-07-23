@@ -1,3 +1,4 @@
+import keras.layers
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -13,6 +14,7 @@ logging.getLogger("tensorflow").setLevel(logging.ERROR)
 tf.autograph.set_verbosity(0)
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 
 #Neuron without activation - Regression/Linear model
 '''
@@ -96,3 +98,4 @@ print(a1)
 alog = sigmoidnp(np.dot(set_w, X_train[0].reshape(1,1))+set_b)
 print(alog)
 plt_logistic(X_train, Y_train, model, set_w, set_b, pos, neg)
+
