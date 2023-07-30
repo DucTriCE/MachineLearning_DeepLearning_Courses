@@ -7,7 +7,7 @@ from PIL import Image
 from torchvision.datasets import ImageFolder
 
 class AnimalDataset(Dataset):
-    def __init__(self, root, train):
+    def __init__(self, root, train, transform=None):
         data_path = os.path.join(root, 'animals')
         self.images_path = []
         self.labels = []
@@ -21,6 +21,7 @@ class AnimalDataset(Dataset):
             for item in os.listdir(category_path):
                 self.images_path.append(os.path.join(category_path, item))
                 self.labels.append(idx)
+        self.transform = transform
 
     def __len__(self):
         return len(self.images_path)
@@ -28,7 +29,9 @@ class AnimalDataset(Dataset):
     def __getitem__(self, item):
         image_path = self.images_path[item]
         label = self.labels[item]
-        image = Image.open(image_path)
+        image = Image.open(image_path).convert('RGB')
+        if self.transform:
+            image = self.transform(image)
         return image, label
 
 
