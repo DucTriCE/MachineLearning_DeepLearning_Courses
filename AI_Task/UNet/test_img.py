@@ -1,0 +1,35 @@
+import numpy as np
+import shutil
+import os
+import torch
+from model.unet_model import CNN
+import cv2
+
+def Run(model, img):
+    img = cv2.resize(img, (160, 80))
+    img_rs = img.copy()
+    img = img[:, :, ::-1].transpose(2, 0, 1)
+    img = np.ascontiguousarray(img)
+    img = torch.from_numpy(img)
+    img = torch.unsqueeze(img, 0)  # add a batch dimension
+    img = img/255.0
+    with torch.no_grad():
+        img_out = model(img)
+    x0 = img_out[0]
+    _, da_predict = torch.max(x0, 0)
+    # print(da_predict.size())
+    DA = da_predict.byte().data.numpy() * 255
+    # print(DA.shape)
+    img_rs[DA > 100] = [255, 0, 0]
+    return img_rs
+
+model = CNN()
+model.load_state_dict(torch.load('pretrained/model_9.pth'))
+model.eval()
+image_list = os.listdir('images')
+shutil.rmtree('results')
+os.mkdir('results')
+for i, imgName in enumerate(image_list):
+    img = cv2.imread(os.path.join('images', imgName))
+    img = Run(model, img)
+    cv2.imwrite(os.path.join('results', imgName), img)
