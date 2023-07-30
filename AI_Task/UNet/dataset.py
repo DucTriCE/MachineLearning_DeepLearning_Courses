@@ -36,10 +36,10 @@ class MyDataset(torch.utils.data.Dataset):
         self.Tensor = transforms.ToTensor()
         self.valid =valid
         if valid:
-            self.root =r"data\\uit_data\\images\\val"
+            self.root =r"data_2\\images\\val"
             self.names = os.listdir(self.root)
         else:
-            self.root =r"data\\uit_data\\images\\train"
+            self.root =r"data_2\\images\\train"
             self.names = os.listdir(self.root)
 
     def __len__(self):
@@ -55,7 +55,7 @@ class MyDataset(torch.utils.data.Dataset):
         H_ = 80
         image_name = os.path.join(self.root ,self.names[idx])
         image = cv2.imread(image_name)
-        label1 = cv2.imread(image_name.replace("images" ,"road").replace("png","jpg"), 0)
+        label1 = cv2.imread(image_name.replace("images","road"), 0)
         # if not os.path.isfile(label1):
         #     label1.replace()
         if not self.valid:

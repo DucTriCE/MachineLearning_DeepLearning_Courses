@@ -17,7 +17,7 @@ def train_net():
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     batch_size = 8
-    num_epochs = 10
+    num_epochs = 50
 
     train_set = MyDataset(transform=False, valid=False)
     train_dataloader = DataLoader(
@@ -41,7 +41,7 @@ def train_net():
     for epoch in range(num_epochs):
         model_file_name = 'pretrained/model_{}.pth'.format(epoch)
         train(train_dataloader, model, criterion, optimizer)
-        val(val_dataloader, model)
+        print(val(val_dataloader, model))
         torch.save(model.state_dict(), model_file_name)
         save_checkpoint({
             'epoch': epoch + 1,
