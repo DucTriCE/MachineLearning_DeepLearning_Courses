@@ -6,9 +6,11 @@ from model.unet_model import CNN
 import cv2
 
 def Run(model, img):
-    img = cv2.resize(img, (160, 80))
+    img = cv2.resize(img, (160, 80))                #Width=160, Height=80
     img_rs = img.copy()
-    img = img[:, :, ::-1].transpose(2, 0, 1)      #RBG
+    #print(img_rs.shape)                            #(Height, width, channel)
+    img = img[:, :, ::-1].transpose(2, 0, 1)        #[:, :, ::-1] reverse fromRGBtoBGR (Orinal color of cv2)
+    # print(img.shape)                              #After transpose: (channel, Height, width)
     img = np.ascontiguousarray(img)
     img = torch.from_numpy(img)
     img = torch.unsqueeze(img, 0)  # add a batch dimension
@@ -18,13 +20,13 @@ def Run(model, img):
     x0 = img_out[0]
     _, da_predict = torch.max(x0, 0)
     # print(da_predict.size())
-    DA = da_predict.byte().data.numpy() * 255   #Background 0, lane: 255
+    DA = da_predict.byte().data.numpy() * 255       #Background 0, lane: 255
     # print(DA.shape)
-    img_rs[DA > 100] = [255, 0, 0]              #DA>100:
+    img_rs[DA > 100] = [255, 0, 0]                  #DA>100:
     return img_rs
 
 model = CNN()
-model.load_state_dict(torch.load('pretrained/model_49.pth'))
+model.load_state_dict(torch.load('pretrained/model_data2.pth'))
 model.eval()
 image_list = os.listdir('test_images')
 shutil.rmtree('results')
