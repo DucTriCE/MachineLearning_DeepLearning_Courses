@@ -1,12 +1,20 @@
 import torch.cuda
+import argparse
 from src.datasets import AnimalDataset
-from torchvision.transforms import ToTensor, Compose, Resize
+from torchvision.transforms import ToTensor, Compose, Resize, ColorJitter, Normalize, RandomAffine
 from torch.utils.data import DataLoader
 from src.models import AdvancedCNN
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 from sklearn.metrics import accuracy_score
+
+
+def get_args():
+    parser = argparse.ArgumentParser("""Train model for Animal Dataset""")
+    parser.add_argument("--batch-size", type=int, default=8, help="batch size of dataset")
+    args = parser.parse_args()
+    return args
 
 def train():
     if torch.cuda.is_available():
@@ -17,6 +25,8 @@ def train():
     batch_size = 4
     train_transforms = Compose([
         Resize(size=(224,224)),
+        ColorJitter(brightness=0.125, contrast=0.5, saturation=0.5, hue=0.05),
+        RandomAffine(degrees=(-5,5), translate=(0.15, 0.15), scale=(0.9, 1.1)),
         ToTensor()
     ])
     train_set = AnimalDataset(root= 'data', train=True, transform=train_transforms)
