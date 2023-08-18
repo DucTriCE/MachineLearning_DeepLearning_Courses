@@ -204,5 +204,6 @@ if __name__ == '__main__':
     model = ResNet50()
     print(netParams(model))
     x = torch.rand(8, 3, 224, 224)
+    print("Input shape: ", x.shape)
     output = model(x)
-    print(output.shape)
+    print("Output shape: ",output.shape)
